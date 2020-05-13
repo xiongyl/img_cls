@@ -1,0 +1,32 @@
+common:
+    arch: resnet50
+    workers: 0
+    num_classes: 3
+    batch_size: 48
+    test_batch_size: 512
+    input_size: 224
+    image_size: 256
+
+    lr: 0.01
+    epochs: 16
+    lr_steps: [8, 13]
+    lr_mults: [0.1, 0.1]
+
+    momentum: 0.9
+    weight_decay: 0.0001
+
+    val_freq: 1000
+    print_freq: 10
+
+    train_root: fd_data/
+    train_list: 
+        - fd_data/annotations/aizoo_crop_train.txt
+        - fd_data/annotations/malong_train.txt
+        - fd_data/annotations/malong_train_0505.txt
+    val_root: fd_data/
+    val_list: 
+        - fd_data/annotations/aizoo_crop_val.txt
+        - fd_data/annotations/malong_val.txt
+        - fd_data/annotations/malong_val_0505.txt
+
+    save_path: output/malong

@@ -1,0 +1,15 @@
+data
+pretrained_models
+output
+
+*__pycache__
+*.pth.tar
+*.pyc
+*.png
+*.npz
+*.ttf
+*.swp
+*.swo
+
+*tfevent*
+*log.txt
